@@ -106,14 +106,16 @@ This project is licensed under the GNU General Public License v3.0 – see the L
 
 ## 📊 Process Flow Diagram
 
+```mermaid
 flowchart TD
-    A[Start] --> B[Clone GitHub repository]
-    B --> C[Generate JUnit tests with Diffblue CLI]
-    C --> D[Build & run tests with Maven]
-    D --> E[Measure coverage with JaCoCo]
-    E -->|Coverage < threshold| F[Retry test generation]
-    E -->|Coverage >= threshold| G[Commit & push to new branch]
-    G --> H[Create Pull Request on GitHub]
-    H --> I[End]
-    F --> C
+A[Start] --> B[Clone GitHub repository]
+B --> C[Generate JUnit tests with Diffblue CLI]
+C --> D[Build & run tests with Maven]
+D --> E[Measure coverage with JaCoCo]
+E -->|Coverage < threshold| F[Retry test generation]
+E -->|Coverage >= threshold| G[Commit & push to new branch]
+G --> H[Create Pull Request on GitHub]
+H --> I[End]
+F --> C
+```
 
